@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Explore, Footer, Hero, Logos, MiddelSection, Navbar, NewsLatter, Pricing } from "./components";
+import {
+  hero,
+  navlinks,
+  memory,
+  placesAPI,
+  brands,
+  pricingapi,
+  footerAPI,
+} from "./data/TravelData";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="overflow-x-hidden">
+      <Navbar navlinks={navlinks} />
+      <Hero hero={hero} />
+      <MiddelSection memory={memory} />
+      <Explore title="Explore The Beauty Of World" placesAPI={placesAPI} />
+      <Logos brands={brands} />
+      <Pricing pricingapi={pricingapi} />
+      <NewsLatter  />
+      <Footer footerAPI={footerAPI} />
     </div>
   );
 }
